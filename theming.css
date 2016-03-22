@@ -1,0 +1,128 @@
+html:not(.paper) body.white, body.white #article {
+    background-color: rgb(251, 251, 251);
+}
+html:not(.paper) body.sepia, body.sepia #article {
+    background-color: rgb(248, 241, 227);
+}
+html:not(.paper) body.gray, body.gray #article {
+    background-color: rgb(90, 90, 92);
+}
+html:not(.paper) body.night, body.night #article {
+    background-color: rgb(18, 18, 18);
+}
+
+/* OS X Reader draws backdrop background colors outside of web content, so the follow set only applies to iOS. */
+html.paper body.ios.white {
+    background-color: rgb(230, 230, 230);
+}
+html.paper body.ios.sepia {
+    background-color: rgb(224, 216, 200);
+}
+html.paper body.ios.gray {
+    background-color: rgb(50, 50, 51);
+}
+html.paper body.ios.night {
+    background-color: black;
+}
+
+html.paper body.white #article {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+html.paper body.sepia #article {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+}
+html.paper body.gray #article {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+html.paper body.night #article {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.35);
+}
+
+body.sepia #article .leading-image, body.sepia #article figure, body.sepia #article .auxiliary {
+    color: rgba(79, 50, 28, 0.9);
+}
+body.gray #article .leading-image, body.gray #article figure, body.gray #article .auxiliary {
+    color: rgba(255, 255, 255, 0.7);
+}
+body.night #article .leading-image, body.night #article figure, body.night #article .auxiliary {
+    color: rgba(255, 255, 255, 0.67);
+}
+
+body.gray #article a, body.night #article a {
+    color: rgba(84, 190, 255, 0.95);
+}
+
+body.white #article .page {
+    color: rgb(27, 27, 27);
+    border-top-color: rgb(220, 220, 220);
+}
+body.sepia #article .page {
+    color: rgb(79, 50, 28);
+    border-top-color: rgb(230, 218, 201)
+}
+body.gray #article .page {
+    color: rgba(255, 255, 255, 0.7);
+    border-top-color: rgb(111, 111, 111);
+}
+body.night #article .page {
+    color: rgb(176, 176, 176);
+    border-top-color: rgb(62, 62, 62);
+}
+
+body.sepia #article .page-number, body.sepia #article #incoming-page-corner {
+    color: rgba(63, 41, 23, 0.5);
+}
+body.gray #article .page-number, body.gray #article #incoming-page-corner {
+    color: rgba(255, 255, 255, 0.35);
+}
+body.night #article .page-number, body.night #incoming-page-corner {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+body.sepia #article hr {
+    background: rgb(230, 218, 201)
+}
+body.gray #article hr {
+    background: rgb(111, 111, 111);
+}
+body.night #article hr {
+    background: rgb(62, 62, 62);
+}
+
+body.sepia #article blockquote {
+    color: rgb(140, 112, 79);
+}
+body.sepia #article blockquote:not(.simple) {
+    border-left-color: rgba(154, 128, 92, 0.1);
+}
+body.gray #article blockquote {
+    color: rgba(255, 255, 255, 0.5);
+}
+body.gray #article blockquote:not(.simple) {
+    border-left-color: rgba(255, 255, 255, 0.1);
+}
+body.night #article blockquote {
+    color: rgba(255, 255, 255, 0.6);
+}
+body.night #article blockquote:not(.simple) {
+    border-left-color: rgba(255, 255, 255, 0.15);
+}
+
+body.sepia .page table td, body.sepia .page table th {
+    border-color: rgb(230, 218, 202);
+}
+body.sepia .page table th {
+    background-color: rgba(154, 128, 92, 0.06);
+}
+body.gray .page table td, body.gray .page table th {
+    border-color: rgb(106, 106, 106);
+}
+body.gray .page table th {
+    background-color: rgba(255, 255, 255, 0.035);
+}
+body.night .page table td, body.night .page table th {
+    border-color: rgb(50, 50, 50);
+}
+body.night .page table th {
+    background-color: rgba(255, 255, 255, 0.045);
+}

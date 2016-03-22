@@ -1,0 +1,315 @@
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.25em;
+    line-height: 1.4em;
+}
+
+h2 {
+    font-size: 1.125em;
+}
+
+h3 {
+    font-size: 1.05em;
+}
+
+h4, h5, h6 {
+    font-size: 1em;
+    margin: 1em 0;
+}
+
+h1.title {
+    text-align: start;
+    -webkit-hyphens: manual;
+    margin-bottom: 1em;
+}
+
+.title {
+    display: none;
+}
+
+:nth-child(1 of .page) .title {
+    display: block;
+}
+
+.page {
+    text-align: start;
+    word-wrap: break-word;
+}
+
+.page.rtl {
+    direction: rtl;
+}
+
+a {
+    color: rgb(65, 110, 210);
+    text-decoration: none;
+}
+
+#article {
+    text-rendering: optimizeLegibility;
+}
+
+#article * {
+    /* Scale down anything larger than our view. Max-width maintains aspect ratios on images. */
+    max-width: 100%;
+}
+
+#article img {
+    /* By default, images are centered on their own line. */
+    margin: 0.5em auto;
+    display: block;
+    height: auto;
+}
+
+#article img.reader-image-tiny {
+    display: inline;
+    margin: 0;
+}
+
+#article .leading-image, figure, .auxiliary {
+    margin-bottom: .25em;
+}
+
+#article .leading-image img {
+    margin: auto;
+    display: block;
+    clear: both;
+}
+
+#article .leading-image .credit {
+    margin: 0;
+    text-align: right;
+}
+
+#article .leading-image .caption,
+#article .leading-image .credit,
+#article figcaption,
+#article .auxiliary figcaption {
+    font-size: 0.75em;
+    line-height: 1.5em;
+    margin-top: 1em;
+    width: 100%;
+}
+
+#article .leading-image .credit + .caption {
+    margin-top: 0.1em;
+}
+
+#article .auxiliary {
+    display: block;
+    clear: both;
+    font-size: 0.75em;
+    line-height: 1.4em;
+    text-align: start;
+}
+
+#article .auxiliary > * {
+    -webkit-margin-start: 0;
+}
+
+#article .auxiliary img, #article .auxiliary > *:first-child {
+    margin: 0;
+}
+
+/* If the element immediately after an image is inline, it might bump up against the image. */
+#article .auxiliary img + * {
+    display: block;
+}
+
+#article .auxiliary figcaption {
+    font-size: 100%;
+}
+
+#article .auxiliary * {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#article .float.left {
+    float: left;
+    margin-right: 20px;
+}
+
+#article .float.right {
+    float: right;
+    margin-left: 20px;
+}
+
+#article .clear {
+    clear: both;
+}
+
+#article ul.list-style-type-none,
+#article ol.list-style-type-none,
+#article .list-style-type-none > li {
+    list-style-type: none;
+    -webkit-padding-start: 0;
+}
+
+#article .page div.scrollable {
+    overflow-x: scroll;
+    word-wrap: normal;
+}
+
+#article .page div.scrollable table {
+    max-width: none;
+}
+
+#article .large-element {
+    max-width: 100%;
+    height: auto;
+}
+
+#article .leading-image, #article figure, #article .auxiliary {
+    font-family: -apple-system-font;
+}
+
+body #article .leading-image, body #article figure, body #article .auxiliary {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+figure {
+    margin: 0;
+}
+
+hr {
+    background: rgba(0, 0, 0, 0.2);
+    height: 1px;
+    border: 0;
+}
+
+pre {
+    font-size: 0.93em;
+    line-height: 1.5em;
+}
+
+blockquote {
+    color: rgba(0, 0, 0, 0.65);
+    margin-left: 2px;
+    margin-right: 6px;
+    padding-left: 16px;
+}
+
+blockquote:not(.simple) {
+    border-left: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Collapse excess whitespace. */
+.page p > p:empty,
+.page div > p:empty,
+.page p > div:empty,
+.page div > div:empty,
+.page p + br,
+.page p > br:only-child,
+.page div > br:only-child,
+.page img + br
+{
+    display: none;
+}
+
+.page table {
+    font-size: 0.9em;
+    text-align: start;
+    word-wrap: break-word;
+    border-collapse: collapse;
+}
+
+.page table td, .page table th {
+    padding: 0.25em 0.5em;
+    border: 1px solid rgb(216, 216, 216);
+}
+
+.page table th {
+    background-color: rgba(0, 0, 0, 0.025);
+}
+
+.page sup, .page sub {
+    line-height: 1;
+    font-size: 0.75em;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Fonts */
+body.system { font-family: -apple-system-font; }
+body.athelas { font-family: Athelas; }
+body.charter { font-family: Charter; }
+body.georgia { font-family: Georgia; }
+body.iowan { font-family: 'Iowan Old Style'; }
+body.palatino { font-family: Palatino; }
+body.seravek { font-family: Seravek; }
+body.times { font-family: 'Times New Roman'; }
+
+body.yugothic { font-family: 'YuGothic'; }
+body.yumincho { font-family: 'YuMincho'; }
+body.hiraginokaku { font-family: 'Hiragino Kaku Gothic ProN'; }
+body.hiraginomincho { font-family: 'Hiragino Mincho ProN'; }
+body.hiraginomaru { font-family: 'Hiragino Maru Gothic ProN'; }
+
+body.heitisc { font-family: 'Heiti SC'; }
+body.songtisc { font-family: 'Songti SC'; }
+body.kaitisc { font-family: 'Kaiti SC'; }
+body.yuantisc { font-family: 'Yuanti SC'; }
+
+body.heititc { font-family: 'Heiti TC'; }
+body.songtitc { font-family: 'Songti TC'; }
+body.kaititc { font-family: 'Kaiti TC'; }
+
+body.applesdgothicneo { font-family: 'Apple SD Gothic Neo'; }
+body.nanumgothic { font-family: 'NanumGothic'; }
+body.nanummyeongjo { font-family: 'NanumMyeongjo'; }
+
+body.khmer { font-family: 'Khmer MN'; }
+body.khmersangnam { font-family: 'Khmer Sangnam MN'; }
+
+body.lao { font-family: 'Lao MN'; }
+body.laosangnam { font-family: 'LaoSangnam MN'; }
+
+body.thonburi { font-family: 'Thonburi'; }
+
+body.kailasa { font-family: 'Kailasa'; }
+
+body.geezapro { font-family: 'Geeza Pro'; }
+
+body.kefa { font-family: 'Kefa' }
+body.arialhebrew { font-family: 'Arial Hebrew' }
+
+body.mshtakan { font-family: 'Mshtakan' }
+
+body.plantagenetcherokee  { font-family: 'Plantagenet Cherokee' }
+
+body.euphemiaucas { font-family: 'Euphemia UCAS' }
+
+body.bangla { font-family: 'Bangla Sangam MN' }
+body.gujarati { font-family: 'Gujarati Sangam MN' }
+body.gurmukhi { font-family: 'Gurmukhi MN' }
+body.devanagari { font-family: 'Devanagari Sangam MN' }
+body.kannada { font-family: 'Kannada Sangam MN' }
+body.malayalam { font-family: 'Malayalam Sangam MN' }
+body.oriya { font-family: 'Oriya Sangam MN' }
+body.sinhala { font-family: 'Sinhala Sangam MN' }
+body.inaimathi { font-family: 'InaiMathi' }
+body.tamil { font-family: 'Tamil Sangam MN' }
+body.telugu { font-family: 'Telugu Sangam MN' }
+
+@media print {
+    body {
+        margin: 2mm 9mm;
+        line-height: 1.5em;
+        font-family: -apple-system-font;
+    }
+
+    .original-url {
+        display: none;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+

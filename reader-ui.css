@@ -1,0 +1,250 @@
+@media screen {
+    body {
+        margin: 0;
+        padding: 0;
+        -webkit-user-select: none;
+        overflow-x: hidden;
+        -webkit-text-size-adjust: none;
+    }
+
+    body.mac {
+        background-color: transparent;
+    }
+
+    .cached embed, .cached applet, .cached object {
+        display: none !important;
+    }
+
+    #article {
+        pointer-events: auto;
+        -webkit-user-select: auto;
+        overflow: visible;
+    }
+
+    #article:focus {
+        outline: none;
+    }
+
+    .page-number {
+        display: block;
+    }
+
+    #article :nth-child(1 of .page):nth-last-child(1 of .page) .page-number {
+        display: none;
+    }
+
+    .page-number, #incoming-page-corner {
+        font-weight: bold;
+        position: absolute;
+        -webkit-user-select: none;
+        font: 12px "Helvetica Neue";
+        color: rgb(168, 168, 168);
+        cursor: default;
+    }
+
+    .page {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        position: relative;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    #article :nth-child(1 of .page) {
+        margin-top: 0;
+        border-top: none;
+        padding-top: 20px;
+    }
+
+    .page:last-of-type {
+        padding-bottom: 45px;
+    }
+
+    .page video {
+        position: relative;
+    }
+
+    #incoming-page-placeholder {
+        height: 30px;
+        margin-bottom: 0;
+    }
+
+    #incoming-page-corner {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+    }
+
+    #incoming-page-text {
+        float: right;
+        -webkit-user-select: none;
+    }
+
+    #next-page-container {
+        position:absolute;
+        /* Workaround for <rdar://problem/8662842> iOS Reader: loading multiple pages stops at the 2nd page. */
+        /*display: none;*/
+        left: -1000px;
+        /* The iframe needs to be wider than the width threshold value for Reader detection, see <rdar://problem/9599297>. */
+        width: 320px;
+        height: 0px;
+    }
+
+    .page div.scrollable {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2) {
+    .page {
+        border-top-width: 0.5px;
+    }
+
+    hr {
+        height: 0.5px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:3) {
+}
+
+#article .extendsBeyondTextColumn {
+    max-width: none;
+}
+
+@media screen and (min-width: 0px) {
+    /* Includes iPhone 5 in portrait */
+    .page { padding-left: 16px; padding-right: 16px; }
+    .page-number, #incoming-page-corner {
+        top: 8px;
+        right: 16px;
+    }
+    #article :nth-child(1 of .page):nth-last-child(1 of .page) {
+        padding-top: 2px;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    /* iPhone 6 in portrait */
+    .page { padding-left: 20px; padding-right: 20px; }
+    .page-number, #incoming-page-corner {
+        top: 8px;
+        right: 20px;
+    }
+    #article :nth-child(1 of .page):nth-last-child(1 of .page) {
+        padding-top: 6px;
+    }
+}
+
+@media screen and (min-width: 414px) {
+    /* iPhone 6 Plus in portrait */
+    .page { padding-left: 22px; padding-right: 22px; }
+    .page-number, #incoming-page-corner {
+        top: 8px;
+        right: 22px;
+    }
+    #article :nth-child(1 of .page):nth-last-child(1 of .page) {
+        padding-top: 8px;
+    }
+}
+
+/* iPhone 5 in landscape (568px) */
+
+@media screen and (min-width: 667px) {
+    /* iPhone 6 in landscape */
+    .page { padding-left: 40px; padding-right: 40px; }
+    .page-number, #incoming-page-corner {
+        /* Stop lining this text up with .page's right margin. */
+        top: 10px;
+        right: 10px;
+    }
+    #article :nth-child(1 of .page):nth-last-child(1 of .page) {
+        padding-top: 14px;
+    }
+}
+
+@media screen and (min-width: 704px) {
+    /* iPad in landscape with the sidebar open */
+    .page { padding-left: 42px; padding-right: 42px; }
+}
+
+@media screen and (min-width: 736px) {
+    /* iPhone 6 Plus in landscape */
+    .page { padding-left: 60px; padding-right: 60px; }
+    #article :nth-child(1 of .page):nth-last-child(1 of .page) {
+        padding-top: 34px;
+    }
+}
+
+@media only screen and (min-width: 780px) {
+    body {
+        -webkit-text-size-adjust: auto;
+    }
+
+    #article {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Readable margins. */
+    body.system #article { max-width: 83.2ex; }
+    body.athelas #article { max-width: 104ex; }
+    body.charter #article { max-width: 86ex; }
+    body.georgia #article { max-width: 94ex; }
+    body.iowan #article { max-width: 90ex; }
+    body.palatino #article { max-width: 97ex; }
+    body.seravek #article { max-width: 87ex; }
+    body.times #article { max-width: 97ex; }
+
+    .page {
+        /* We don't want the lines seperating pages to extend beyond the primary text column. */
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+}
+
+#article {
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* Reader's paper appearance. */
+html.paper {
+    height: 100%;
+}
+
+html.paper body {
+    height: calc(100% - 44px);
+}
+
+html.paper body:after {
+    content: "";
+    height: 22px;
+    display: block;
+}
+
+html.paper #article {
+    min-height: 100%;
+    margin: 22px auto 0 auto;
+}
+
+html.paper #article :nth-child(1 of .page), html.paper #article :nth-child(1 of .page):nth-last-child(1 of .page) {
+    padding-top: 46px;
+}
+
+html.paper #article .page-number, html.paper #article #incoming-page-corner {
+    /* Stop lining this text up with .page's right margin. */
+    top: 14px;
+    right: 0px;
+}
+/* End Reader's paper appearance. */
+
+/* Use slightly smaller page padding when vertically constrained. */
+@media screen and (max-height: 700px) {
+    .page {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
